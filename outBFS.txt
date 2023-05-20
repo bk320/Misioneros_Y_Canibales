@@ -1,0 +1,56 @@
+
+
+Busqueda en Anchura(BFS) :: 
+
+Nro de Nodos Expandidos: 15
+Nro de Nodos Explorados: 15
+
+
+
+< @STEP: 0 Estado (3, 3, 1, 0, 0) >
+
+ lleva a 1 misionero(s) y 1 canibal(s) desde la orilla original hasta la nueva orilla..
+
+< @STEP: 1 Estado (2, 2, 0, 1, 1) >
+
+ lleva a 1 misionero(s) y 0 canibal(s) regresar desde la nueva orilla hasta la orilla original..
+
+< @STEP: 2 Estado (3, 2, 1, 0, 1) >
+
+ lleva a 0 misionero(s) y 2 canibal(s) desde la orilla original hasta la nueva orilla..
+
+< @STEP: 3 Estado (3, 0, 0, 0, 3) >
+
+ lleva a 0 misionero(s) y 1 canibal(s) regresar desde la nueva orilla hasta la orilla original..
+
+< @STEP: 4 Estado (3, 1, 1, 0, 2) >
+
+ lleva a 2 misionero(s) y 0 canibal(s) desde la orilla original hasta la nueva orilla..
+
+< @STEP: 5 Estado (1, 1, 0, 2, 2) >
+
+ lleva a 1 misionero(s) y 1 canibal(s) regresar desde la nueva orilla hasta la orilla original..
+
+< @STEP: 6 Estado (2, 2, 1, 1, 1) >
+
+ lleva a 2 misionero(s) y 0 canibal(s) desde la orilla original hasta la nueva orilla..
+
+< @STEP: 7 Estado (0, 2, 0, 3, 1) >
+
+ lleva a 0 misionero(s) y 1 canibal(s) regresar desde la nueva orilla hasta la orilla original..
+
+< @STEP: 8 Estado (0, 3, 1, 3, 0) >
+
+ lleva a 0 misionero(s) y 2 canibal(s) desde la orilla original hasta la nueva orilla..
+
+< @STEP: 9 Estado (0, 1, 0, 3, 2) >
+
+ lleva a 1 misionero(s) y 0 canibal(s) regresar desde la nueva orilla hasta la orilla original..
+
+< @STEP: 10 Estado (1, 1, 1, 2, 2) >
+
+ lleva a 1 misionero(s) y 1 canibal(s) desde la orilla original hasta la nueva orilla..
+
+< @STEP: 11 Estado (0, 0, 0, 3, 3) >
+
+ Tiempo transcurrido en Busqueda por Anchura: 0.00ms
