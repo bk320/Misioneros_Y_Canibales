@@ -13,12 +13,14 @@ CONTENIDO_OUT = sys.stdout
 # y ese no deberia ser un paso
 def genPosiblesmovimientos(CAPAC_BOTE):
 	movimientos = []
+	print("Movimientos: ")
 	for m in range(CAPAC_BOTE + 1):
 		for c in range(CAPAC_BOTE + 1):
 			if 0 < m < c:
 				continue
 			if 1 <= m + c <= CAPAC_BOTE:
 				movimientos.append((m, c))
+	print(movimientos)			
 	return movimientos
 
 #Busqueda en Anchura(BFS)
@@ -49,7 +51,7 @@ def runDFS(g, ESTADO_INICIAL):
 
 
 def main():
-
+	print("inicio")
 	#para realizar cualquier cambio Editar el archivo inicio.txt
 	sys.stdin = open("inicio.txt", "r")
 
@@ -83,9 +85,10 @@ def main():
 	runBFS(g, ESTADO_INICIAL)
 	sys.stdout = CONTENIDO_OUT
 	print("Ejecucion finalizada Busqueda en Anchura(BFS)>")
-
 	print("\nejecutando Busqueda en Profundidad>")
 	runDFS(g, ESTADO_INICIAL)
 	sys.stdout = CONTENIDO_OUT
 	print("Ejecucion finalizada Busqueda en Profundidad(DFS)>")
 
+if __name__ == '__main__':
+	main()
