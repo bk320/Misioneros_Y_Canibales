@@ -53,4 +53,4 @@ Nro de Nodos Explorados: 15
 
 < Step 11 Estado (0, 0, 0, 3, 3) >
 
- Tiempo transcurrido en Busqueda por Anchura: 1.01ms
+ Tiempo transcurrido en Busqueda por Anchura: 0.00ms
