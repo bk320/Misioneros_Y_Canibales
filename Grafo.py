@@ -24,33 +24,33 @@ class Grafo:
 		cola = [inicio]
 		while cola:
 			self.expandedBFS += 1
+			# Desencolar un vértice de la cola
+			ultimo = cola.pop(0)
 
-			primero = cola.pop(0)
-
-			if primero.isGoalState():
+			if ultimo.isGoalState():
 				print("Nro de Nodos Expandidos: " + str(self.expandedBFS))
 				print("Nro de Nodos Explorados: " + str(visitado.__len__()))
 				cola.clear()
-				self.bfs_padre[ESTADO_FINAL] = primero
+				self.bfs_padre[ESTADO_FINAL] = ultimo
 				return self.bfs_padre
 
 			# Detiene la búsqueda después de alcanzar un cierto límite de tiempo/nodos.
 			t = time.time() - start_time
-			if t > primero.CONSTANTES.MAX_TIME or self.expandedBFS > primero.CONSTANTES.MAX_NODES:
-				if t > primero.CONSTANTES.MAX_TIME:
+			if t > ultimo.CONSTANTES.MAX_TIME or self.expandedBFS > ultimo.CONSTANTES.MAX_NODES:
+				if t > ultimo.CONSTANTES.MAX_TIME:
 					print("%.2fs SE HA EXCEDIDO EL LÍMITE DE TIEMPO de %.2fs" % (t, u.CONSTANTES.MAX_TIME))
 				else:
-					print("SE HA EXCEDIDO EL LÍMITE DE NODOS de %d" % primero.CONSTANTES.MAX_NODES)
+					print("SE HA EXCEDIDO EL LÍMITE DE NODOS de %d" % ultimo.CONSTANTES.MAX_NODES)
 				print("Nro de Nodos Expandidos: " + str(self.expandedBFS))
 				print("Nro de Nodos Explorados: " + str(visitado.__len__()))
 				cola.clear()
 				return {}
 
-			for vecino in reversed(primero.sucesores()):
+			for vecino in reversed(ultimo.sucesores()):
 				if (vecino.misioneros, vecino.canivales, vecino.dir) not in visitado.keys():	#si no es visitado
-					self.bfs_padre[vecino] = primero
-					vecino.level = primero.level + 1
-					cola.append(vecino)			#Vecino del vecino actual XD
+					self.bfs_padre[vecino] = ultimo
+					vecino.level = ultimo.level + 1
+					cola.append(vecino)			#agregando a la cola al vecino
 					visitado[(vecino.misioneros, vecino.canivales, vecino.dir)] = True		#Marcamos el vecinoo actual como visitado
 
 		return {}

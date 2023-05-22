@@ -7,7 +7,7 @@ class GUI:
         self.window = tk.Tk()
         self.window.title("Interfaz Gráfica")
         self.window.geometry("1500x700")
-        self.window.resizable(False, False)  # Evitar cambio de tamaño
+        #self.window.resizable(False, False)  # Evitar cambio de tamaño
         
          # Body (Contenido)
         self.body_frame = tk.Frame(self.window)

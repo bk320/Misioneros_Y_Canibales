@@ -68,9 +68,9 @@ class Estado(object):
 		# luego verifica si los misioneros son superados en número por los caníbales en alguna orilla.
 		if (self.canivales > self.misioneros > 0) or (			# más caníbales que misioneros en la orilla original.
 				self.canivalesPassed > self.misionerosPassed > 0):  # ambos son mayores a 0 ?
-			#print("Numero incoherente de canivales o misioneros")
+			#print("Numero incoherente de canibales o misioneros")
 			return False
-
+		#print("Estado valido")
 		return True
 
 	#veirfica si no hay canibales, ni misioneros en la orilla y la direcion sea igual a DE_NUEVO_A_ANTIGUO entonces devuelve true
